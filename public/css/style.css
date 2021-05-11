@@ -1,0 +1,139 @@
+* {
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    display: block;
+    }
+body {
+    background-image: url("../img/todo.jpg");
+    width:100%;
+    height:100%;
+    background-color: rgb(134, 149, 155);
+    background-blend-mode: multiply;
+
+}
+#navigation {
+    display: none;
+   }
+   #navigation.opened {
+   display: block;
+   }
+.upper {
+    width:100%;
+    height:20%;
+    background-image: url("../img/todo.jpg");
+    background-color: rgb(46, 63, 63);
+    background-blend-mode: multiply;
+    overflow:auto;
+
+}
+.menuleft{
+    width:50%;
+    height:100%;
+    float:left;
+    justify-content: center;
+    align-items: center;
+    display:flex;
+}
+.menuleft p{
+    font-size: 45px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:azure;  
+    margin-left: 30px; 
+    filter: alpha(opacity=50);
+
+}
+.menuleft i {
+    font-size:35px;
+    color:white;
+}
+.menuright{
+    float:right;
+    width:50%;
+    height:100%;
+    justify-content: center;
+    align-items: center;
+    display:flex;
+}
+.menuright input{
+    float:left;
+    width: 250px;
+    height: 30px;
+}
+.menuright button{
+    float:right;
+    width: 250px;
+    height: 30px;
+
+}
+.todo{
+    justify-content: center;
+    align-items: center;
+    display:flex;
+}
+.list{
+    width:50%;
+    align-items: center;
+    justify-content: center;
+    display:flex;
+}
+.list ul{
+
+}
+.list li{
+    margin-top: 25px;
+    align-items: center;
+    display:flex;
+    
+}
+.list input{
+    height:30px;
+    width:30px;
+    color:black;
+    background-color: black;
+}
+.list input:checked{
+    background-color: black;
+    color:white;
+    
+}
+.list i {
+    font-size:25px;
+    color:black;
+}
+.list i:hover{
+    color:white;
+
+}
+.list a{
+
+
+}
+.switch{
+    align-items: center;
+    display:flex;
+    margin-right:50px;
+    text-decoration: none;
+}
+.switch:hover{
+    text-decoration: underline;
+    text-decoration-color: black;
+}
+.napis{
+    color:white;
+    font-size: 30px;
+    
+}
+.list a:hover{
+
+}
+.trash{
+    position:absolute;
+    right:0;
+}
+.zrobione{
+    text-decoration: line-through;
+    text-decoration-color: black;
+}

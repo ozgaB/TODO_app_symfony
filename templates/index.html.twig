@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+{% block title %}Moje zadania!{% endblock %}
+
+{% block body %}
+
+
+    <section class="upper">
+        <div class="menuleft">
+            <i class="fas fa-tasks fa-30px"></i>    <p>Moje Zadania:</p>
+        </div>
+        <div class="menuright">
+            <form method="POST" action="{{path('create_task')}}">
+                <input type="text" name="task_input" placeholder="">
+                <button type="submit" value="Dodaj Zadanie">Dodaj Zadanie</button>
+            </form>
+                {% if puste is defined %}
+                <p style="color:red"> {{ puste }}</p>
+                {% endif %}
+                {% if dodane is defined %}
+                <p style="color:green"> {{ dodane }}</p>
+                {% endif %}
+        </div>
+    </section>
+    <section class="todo">
+        
+        <div class="list">
+            <ul>
+
+                {% for task in tasks %}
+                <li><a class="switch" href="{{path('switch_status',{'id':task.id})}}" {% if task.status == true %} style="text-decoration: line-through; text-decoration-color: black"{% endif %}><span class="napis" >{{task.title}}</span></a><a  class="trash" href="{{path('delete_task',{'id':task.id})}}"><i class="fas fa-trash"></i></a></li>
+
+
+
+                {% endfor %}
+
+
+
+
+
+            </ul>
+
+
+
+        </div>
+        
+    </section>
+
+
+
+
+
+
+
+
+
+{% endblock %} 
