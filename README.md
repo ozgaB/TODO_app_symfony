@@ -1,5 +1,5 @@
 # TODO_app_symfony
-Prosta aplikacja TODO mojego autorstwa wykonana w Symfony 5 
+Aplikacja TODO wykorzystującego operację crud wykonana w Symfony 5 
 
 
 
